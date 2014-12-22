@@ -1,0 +1,19 @@
+$uiPath : '../images/ui.png';
+$uiX2Path : '../images/ui_x2.png';
+$uiWidth : 800;
+$uiHeight : 400;
+
+@import 'core/_mixIn';
+@import 'core/_fonts';
+@import 'core/_normalize';
+@import 'core/_center';
+
+@import 'widgets/_canvasBtn';
+
+@import 'ui/_base';
+@import 'ui/_header';
+@import 'ui/_stepTexts';
+@import 'ui/_footer';
+@import 'ui/_prompt';
+@import 'ui/_instructions';
+@import 'ui/_hueSlider';

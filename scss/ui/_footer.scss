@@ -1,0 +1,24 @@
+.footer {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    text-align: right;
+    color: #fff;
+}
+
+.footer-line {
+    margin-right: 30px;
+    opacity: 0;
+
+    font-size: 12px;
+    line-height: 16px;
+    a {
+        color: #fff;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

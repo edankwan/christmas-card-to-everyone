@@ -1,0 +1,35 @@
+.canvas-btn {
+    width: 86px;
+    height: 86px;
+    position: relative;
+    display: inline-block;
+
+    &.is-active {
+        cursor: pointer;
+
+        &:hover {
+            .canvas-btn-text {
+                opacity: 1;
+            }
+        }
+    }
+
+    font-size: 16px;
+    line-height: 86px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    @include transform(translateZ(0));
+
+    canvas {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        // pointer-events: none;
+    }
+}
+
+.canvas-btn-text {
+    position: relative;
+    opacity: 0.4;
+}

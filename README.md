@@ -1,4 +1,5 @@
-christmas-card-to-everyone
-==========================
+No installation for Javascript dev environment 
 
-A Christmas Experiment for 2014
+### Installation
+1. Install node.
+2. Go to `/tools` in your terminal, run `npm install`

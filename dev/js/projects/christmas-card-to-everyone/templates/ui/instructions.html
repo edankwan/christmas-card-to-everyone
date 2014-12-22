@@ -1,0 +1,39 @@
+<div class="instructions bss-vcenter">
+    <div class="bss-outer">
+        <div class="bss-inner">
+            <div class="instructions-title"><%=instructions.title%></div>
+            <div class="instructions-texts-wrapper">
+                <%
+                var isPervertMode = _settings.pervertMode;
+                var locale = _settings.locale;
+                var stepItem;
+                for(var i = 0; i < 4; i++) {
+                    stepItem = locale['step' + i];
+                %>
+                <div class="instructions-text is-step-<%=i%>"><%= isPervertMode && stepItem.pervertInstruction ? stepItem.pervertInstruction : stepItem.instruction %></div>
+                <% }%>
+                <div class="instructions-share-wrapper">
+                    <input class="instructions-url-input" value="" disabled/>
+                    <div class="instruction-social-wrapper">
+                        <div class="instruction-social-item is-facebook" data-id="facebook">
+                            <div class="instruction-social-item-part instructions-social-assets is-back"></div>
+                            <div class="instruction-social-item-part instructions-social-assets is-front"></div>
+                        </div>
+                        <div class="instruction-social-item is-twitter" data-id="twitter">
+                            <div class="instruction-social-item-part instructions-social-assets is-back"></div>
+                            <div class="instruction-social-item-part instructions-social-assets is-front"></div>
+                        </div>
+                        <div class="instruction-social-item is-gplus" data-id="gplus">
+                            <div class="instruction-social-item-part instructions-social-assets is-back"></div>
+                            <div class="instruction-social-item-part instructions-social-assets is-front"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="instructions-canvas-btn canvas-btn">
+                <div class="canvas-btn-text is-next"><%=instructions.next%></div>
+                <div class="canvas-btn-text is-restart"><%=instructions.restart%></div>
+            </div>
+        </div>
+    </div>
+</div>

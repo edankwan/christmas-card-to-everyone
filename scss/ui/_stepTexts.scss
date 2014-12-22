@@ -1,0 +1,11 @@
+.step-texts {
+    position: absolute;
+    left: 40px;
+
+    canvas {
+        position: absolute;
+
+        @include transform(translate3d(-50px,0,0));
+        opacity: 0;
+    }
+}

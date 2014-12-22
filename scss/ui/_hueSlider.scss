@@ -1,0 +1,37 @@
+.hue-slider {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 136px;
+    background-color: rgba(0, 0, 0, 0);
+
+    opacity: 0;
+    cursor: pointer;
+}
+
+.hue-slider-inner {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 66px;
+    margin-left: -10px;
+    margin-top: -33px;
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, .1), 1px 1px 8px 3px rgba(0, 0, 0, .04);
+}
+
+.hue-slider-btn {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-left: -6px;
+    margin-top: -5px;
+    background-color: #f00;
+    border-radius: 50% 50%;
+    border: 2px solid #fff;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, .1)
+}

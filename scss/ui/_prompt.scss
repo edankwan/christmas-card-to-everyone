@@ -1,0 +1,169 @@
+@mixin promptTextOutline($color) {
+    text-shadow: -3px 3px 0 $color,
+    0px 3px 0 $color,
+    3px 3px 0 $color,
+    -3px -3px 0 $color,
+    0px -3px 0 $color,
+    3px -3px 0 $color,
+    3px 0px 0 $color,
+    -3px 0px 0 $color;
+}
+
+.prompt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1024;
+
+    canvas {
+        position: absolute;
+        z-index: 0;
+    }
+
+    #app.is-desktop & {
+        .prompt-question,
+        .prompt-answers-container, {
+            display: block;
+        }
+        .prompt-question-no-mobile {
+            display: none;
+        }
+    }
+
+    #app.is-mobile & {
+        .prompt-question,
+        .prompt-answers-container, {
+            display: none;
+        }
+        .prompt-question-no-mobile {
+            display: block;
+        }
+    }
+}
+
+.prompt-dialog {
+    display: none;
+    position: absolute;
+    right: 314px;
+    bottom: 300px;
+    width: 360px;
+    height: 140px;
+    margin: 0 auto;
+    z-index: 1;
+
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2a2a2a;
+
+    #app.is-mobile & {
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        top: 50%;
+        margin-left: -180px;
+        margin-top: -70px;
+    }
+}
+
+.prompt-dialog-base-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #6b9519;
+    border-radius: 10px 10px;
+    @include transform(
+        matrix3d(0.877724982, -0.009295961, 0, 0.000415232, 0.049479917, 0.858506849, 0, 0.000638201, 0, 0, 1, 0, 22.284860179, 6.700320608, 0, 1)
+    );
+}
+
+.prompt-dialog-base {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #c4ff52;
+    border-radius: 10px 10px;
+    @include transform(
+        matrix3d(0.874977942, -0.036740956, 0, 0.000404148, 0.04442945, 0.849376092, 0, 0.000697834, 0, 0, 1, 0, 8.873152423, -4.820584283, 0, 1)
+    );
+}
+
+.prompt-dialog-inner {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+.prompt-question,
+.prompt-question-no-mobile {
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+
+    @include promptTextOutline(#3e5e00);
+    @include transform(
+        skewY(-1deg)
+    );
+}
+
+.prompt-question-no-mobile {
+    font-size: 20px;
+    @include transform(
+        skewY(-2deg)
+    );
+}
+
+.prompt-answers-container {
+    width: 200px;
+    margin: 5px 0 0 auto;
+}
+
+.prompt-yes {
+    color: #ccc;
+}
+
+.prompt-answer {
+    position: relative;
+    display: inline-block;
+    width: 74px;
+    height: 74px;
+    cursor: pointer;
+    vertical-align: top;
+
+    font-size: 30px;
+    line-height: 74px;
+    border-radius: 50% 50%;
+
+    color: #fff;
+
+    &.prompt-yes {
+        margin-top: 4px;
+        margin-right: -10px;
+        background-color: #c35959;
+        box-shadow: inset -3px -3px 0px 3px #753636;
+        @include promptTextOutline(#753636);
+        @include transform(rotateZ(-15deg) scale3d(0.7, 0.7, 1));
+
+        &:hover {
+            @include transform(rotateZ(-5deg)scale3d(0.8, 0.8, 1));
+        }
+    }
+
+    &.prompt-no {
+        width: 94px;
+        height: 76px;
+        margin-top: -5px;
+        padding-top: 18px;
+        line-height: 32px;
+        background-color: #00c6ff;
+        box-shadow: inset -2px -2px 0px 2px #007a99;
+        @include promptTextOutline(#007a99);
+        @include transform(rotateZ(5deg)scale3d(0.9, 0.9, 1));
+
+        &:hover {
+            @include transform(rotateZ(12deg) scale3d(1, 1, 1));
+        }
+    }
+
+    @include transformTransition(.16s ease-in-out);
+}

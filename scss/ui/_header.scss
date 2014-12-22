@@ -1,0 +1,30 @@
+.header {
+    display: none;
+    position: absolute;
+    width: 100%;
+
+    @include transform(translateZ(0) skewY(-7deg));
+    pointer-events: none;
+
+    text-align: center;
+    color: #fff;
+}
+
+.header-line-1 {
+    font-size: 30px;
+    line-height: 30px;
+    opacity: 0;
+}
+
+.header-line-2 {
+    font-size: 24px;
+    line-height: 24px;
+    opacity: 0;
+}
+
+.header-line-3 {
+    font-size: 36px;
+    line-height: 36px;
+    opacity: 0;
+    padding-bottom: 9px;
+}

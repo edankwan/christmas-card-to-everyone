@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'quicksand-regular';
+    src: url('../fonts/quicksand-regular.eot');
+    src: url('../fonts/quicksand-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand-regular.woff2') format('woff2'),
+         url('../fonts/quicksand-regular.woff') format('woff'),
+         url('../fonts/quicksand-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'quicksand-bold';
+    src: url('../fonts/quicksand-bold.eot');
+    src: url('../fonts/quicksand-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand-bold.woff2') format('woff2'),
+         url('../fonts/quicksand-bold.woff') format('woff'),
+         url('../fonts/quicksand-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lobster';
+    src: url('../fonts/lobster.eot');
+    src: url('../fonts/lobster.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lobster.woff2') format('woff2'),
+         url('../fonts/lobster.woff') format('woff'),
+         url('../fonts/lobster.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'luckiest-guy';
+    src: url('../fonts/luckiest-guy.eot');
+    src: url('../fonts/luckiest-guy.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/luckiest-guy.woff2') format('woff2'),
+         url('../fonts/luckiest-guy.woff') format('woff'),
+         url('../fonts/luckiest-guy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-normal {
+    font-family: 'quicksand-regular';
+}
+
+.font-bold {
+    font-family: 'quicksand-bold';
+}
+
+.font-freehand {
+    font-family: 'lobster';
+}
+
+.font-pop {
+    font-family: 'luckiest-guy';
+}
